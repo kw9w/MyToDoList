@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qIp-Ww-4Mx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TJD-ZR-Wye">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Todo Table View Controller-->
+        <!--My Todo List-->
         <scene sceneID="slU-ig-Taa">
             <objects>
                 <tableViewController id="qIp-Ww-4Mx" customClass="MyTodoTableViewController" customModule="MyToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,10 +57,29 @@
                             <outlet property="delegate" destination="qIp-Ww-4Mx" id="kca-mD-yOX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="My Todo List" id="WZr-Za-Qo8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZR9-JB-NZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="206"/>
+            <point key="canvasLocation" x="774" y="198"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YzH-0Q-m4d">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TJD-ZR-Wye" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wvk-QI-FmM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qIp-Ww-4Mx" kind="relationship" relationship="rootViewController" id="1PM-Am-rbX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7l-G6-bxt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-90" y="198"/>
         </scene>
     </scenes>
     <resources>
