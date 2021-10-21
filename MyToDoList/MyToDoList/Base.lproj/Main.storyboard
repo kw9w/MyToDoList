@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,11 +58,32 @@
                             <outlet property="delegate" destination="qIp-Ww-4Mx" id="kca-mD-yOX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Todo List" id="WZr-Za-Qo8"/>
+                    <navigationItem key="navigationItem" title="My Todo List" id="WZr-Za-Qo8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="coU-8e-tr2">
+                            <connections>
+                                <segue destination="ZfL-Xq-eFK" kind="presentation" id="Qdd-ty-NwU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZR9-JB-NZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="198"/>
+            <point key="canvasLocation" x="757" y="203"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Gac-MW-MQP">
+            <objects>
+                <viewController id="ZfL-Xq-eFK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1PF-Mn-k11">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Bar-4a-QLP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2I-HP-RYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1568" y="203"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YzH-0Q-m4d">
