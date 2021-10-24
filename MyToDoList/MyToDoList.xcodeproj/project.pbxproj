@@ -15,6 +15,7 @@
 		BB1BE35A271DA59200A7FE29 /* MyTodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1BE359271DA59200A7FE29 /* MyTodoTableViewController.swift */; };
 		BB1BE35C271DA5D200A7FE29 /* MyTodoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1BE35B271DA5D200A7FE29 /* MyTodoTableViewCell.swift */; };
 		BBA358D427203F3C00FE1EAC /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA358D327203F3B00FE1EAC /* TodoItem.swift */; };
+		BBA358D6272127A000FE1EAC /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA358D5272127A000FE1EAC /* ItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BB1BE359271DA59200A7FE29 /* MyTodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTodoTableViewController.swift; sourceTree = "<group>"; };
 		BB1BE35B271DA5D200A7FE29 /* MyTodoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTodoTableViewCell.swift; sourceTree = "<group>"; };
 		BBA358D327203F3B00FE1EAC /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		BBA358D5272127A000FE1EAC /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BB1BE345271DA42100A7FE29 /* AppDelegate.swift */,
 				BB1BE347271DA42100A7FE29 /* SceneDelegate.swift */,
 				BB1BE34B271DA42100A7FE29 /* Main.storyboard */,
+				BBA358D5272127A000FE1EAC /* ItemViewController.swift */,
 				BBA358D327203F3B00FE1EAC /* TodoItem.swift */,
 				BB1BE35B271DA5D200A7FE29 /* MyTodoTableViewCell.swift */,
 				BB1BE359271DA59200A7FE29 /* MyTodoTableViewController.swift */,
@@ -149,6 +152,7 @@
 				BB1BE348271DA42100A7FE29 /* SceneDelegate.swift in Sources */,
 				BB1BE35A271DA59200A7FE29 /* MyTodoTableViewController.swift in Sources */,
 				BB1BE35C271DA5D200A7FE29 /* MyTodoTableViewCell.swift in Sources */,
+				BBA358D6272127A000FE1EAC /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
