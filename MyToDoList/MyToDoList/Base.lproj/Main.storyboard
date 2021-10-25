@@ -79,23 +79,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3D-ea-Clz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3D-ea-Clz">
                                 <rect key="frame" x="38" y="104" width="77" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMj-yJ-1DD">
-                                <rect key="frame" x="38" y="171" width="125" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMj-yJ-1DD">
+                                <rect key="frame" x="38" y="171" width="125" height="38"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snL-sX-MtY">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snL-sX-MtY">
                                 <rect key="frame" x="303" y="20" width="91" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Done">
                                     <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="23"/>
@@ -104,9 +101,8 @@
                                     <action selector="done:" destination="ZfL-Xq-eFK" eventType="touchUpInside" id="Xrk-B6-YWb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9y-C7-hg6">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9y-C7-hg6">
                                 <rect key="frame" x="17" y="20" width="98" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Cancel">
                                     <fontDescription key="titleFontDescription" name="Baskerville-BoldItalic" family="Baskerville" pointSize="23"/>
@@ -117,21 +113,37 @@
                                     <action selector="cancel:" destination="ZfL-Xq-eFK" eventType="touchUpInside" id="UMy-ug-qPs"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hye-dk-aKT">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hye-dk-aKT">
                                 <rect key="frame" x="294" y="179" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w5N-Tb-8oB">
-                                <rect key="frame" x="123" y="103" width="220" height="49"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w5N-Tb-8oB">
+                                <rect key="frame" x="123" y="103" width="220" height="47.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="BsV-Vi-6wK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="33"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZfL-Xq-eFK" id="xfd-tx-cjy"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bar-4a-QLP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J9y-C7-hg6" firstAttribute="top" secondItem="Bar-4a-QLP" secondAttribute="top" constant="20" id="8Pg-9p-zAo"/>
+                            <constraint firstItem="w5N-Tb-8oB" firstAttribute="top" secondItem="Bar-4a-QLP" secondAttribute="top" constant="103" id="9ER-1Y-x1q"/>
+                            <constraint firstItem="mMj-yJ-1DD" firstAttribute="leading" secondItem="Bar-4a-QLP" secondAttribute="leading" constant="38" id="HK6-ff-vJW"/>
+                            <constraint firstItem="Bar-4a-QLP" firstAttribute="trailing" secondItem="w5N-Tb-8oB" secondAttribute="trailing" constant="71" id="MGc-ym-agf"/>
+                            <constraint firstItem="snL-sX-MtY" firstAttribute="top" secondItem="Bar-4a-QLP" secondAttribute="top" constant="20" id="Ses-Hr-gaH"/>
+                            <constraint firstItem="Bar-4a-QLP" firstAttribute="trailing" secondItem="snL-sX-MtY" secondAttribute="trailing" constant="20" id="a95-IN-o8k"/>
+                            <constraint firstItem="Hye-dk-aKT" firstAttribute="top" secondItem="Bar-4a-QLP" secondAttribute="top" constant="179" id="cpz-o9-fnV"/>
+                            <constraint firstItem="P3D-ea-Clz" firstAttribute="leading" secondItem="Bar-4a-QLP" secondAttribute="leading" constant="38" id="d8B-hh-WVe"/>
+                            <constraint firstItem="J9y-C7-hg6" firstAttribute="leading" secondItem="Bar-4a-QLP" secondAttribute="leading" constant="17" id="dzJ-HS-LeR"/>
+                            <constraint firstItem="mMj-yJ-1DD" firstAttribute="top" secondItem="Bar-4a-QLP" secondAttribute="top" constant="171" id="gYQ-Sb-jw7"/>
+                            <constraint firstItem="P3D-ea-Clz" firstAttribute="top" secondItem="Bar-4a-QLP" secondAttribute="top" constant="104" id="juM-OM-7t0"/>
+                            <constraint firstItem="Bar-4a-QLP" firstAttribute="trailing" secondItem="Hye-dk-aKT" secondAttribute="trailing" constant="73" id="xAC-jz-edP"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="snL-sX-MtY" id="6mO-UT-BaQ"/>
