@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TodoItem: NSObject {
+class TodoItem: NSObject,Encodable,Decodable {
     var title: String
     var isChecked: Bool
     
