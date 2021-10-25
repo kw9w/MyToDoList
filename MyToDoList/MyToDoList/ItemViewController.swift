@@ -31,6 +31,11 @@ class ItemViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         doneButton.isEnabled = false
+        if itemToEdit != nil {
+            doneButton.isEnabled = true 
+            self.titleInput.text! = itemToEdit!.title
+            self.isChecked.isOn = itemToEdit!.isChecked
+        }
     }
     
     @IBAction func cancel(_ sender: Any) {
