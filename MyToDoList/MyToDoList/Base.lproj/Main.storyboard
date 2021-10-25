@@ -50,6 +50,7 @@
                                 <connections>
                                     <outlet property="status" destination="MU0-Uw-Bta" id="6Ad-Z7-SJM"/>
                                     <outlet property="title" destination="8JY-Cd-vZE" id="acv-J7-mw4"/>
+                                    <segue destination="ZfL-Xq-eFK" kind="presentation" identifier="editItem" trigger="accessoryAction" id="l9o-aH-EnG"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,7 +63,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="coU-8e-tr2">
                             <color key="tintColor" systemColor="systemTealColor"/>
                             <connections>
-                                <segue destination="ZfL-Xq-eFK" kind="presentation" id="Qdd-ty-NwU"/>
+                                <segue destination="ZfL-Xq-eFK" kind="presentation" identifier="addItem" id="Qdd-ty-NwU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -174,6 +175,9 @@
             <point key="canvasLocation" x="-90" y="198"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="l9o-aH-EnG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

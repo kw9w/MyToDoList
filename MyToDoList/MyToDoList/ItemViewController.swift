@@ -7,13 +7,24 @@
 
 import UIKit
 
+protocol AddItemDelegate {
+    func addItem(item: TodoItem)
+}
 
+protocol EditItemDelegate {
+    func editItem(newItem: TodoItem, itemIndex: Int)
+}
 
 class ItemViewController: UIViewController {
 
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var isChecked: UISwitch!
+    
+    var addItemDelegate: AddItemDelegate?
+    var editItemDelegate: EditItemDelegate?
+    var itemToEdit: TodoItem?
+    var itemIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +38,12 @@ class ItemViewController: UIViewController {
     }
     
     @IBAction func done(_ sender: Any) {
+        if itemToEdit == nil {
+            self.addItemDelegate?.addItem(item: TodoItem(title: titleInput.text!, isChecked: isChecked.isOn))
+        }
+        else {
+            self.editItemDelegate?.editItem(newItem: TodoItem(title: titleInput.text!, isChecked: isChecked.isOn), itemIndex: self.itemIndex)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

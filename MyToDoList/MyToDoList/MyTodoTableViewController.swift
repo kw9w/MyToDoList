@@ -86,14 +86,49 @@ class MyTodoTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "addItem" {
+            let addItemViewController = segue.destination as! ItemViewController
+            addItemViewController.addItemDelegate = self
+        }
+        else if segue.identifier == "editItem" {
+            let editItemViewController = segue.destination as! ItemViewController
+            let cell = sender as! MyTodoTableViewCell
+            var isChecked: Bool
+            if cell.status.text! == "☑️" {
+                isChecked = true
+            }
+            else {
+                isChecked = false
+            }
+            let item = TodoItem(title: cell.title.text!, isChecked: isChecked)
+            editItemViewController.itemToEdit = item
+            editItemViewController.itemIndex = tableView.indexPath(for: cell)!.row
+            editItemViewController.editItemDelegate = self
+        }
     }
-    */
+    
 
+}
+
+extension MyTodoTableViewController: AddItemDelegate {
+    func addItem(item: TodoItem) {
+        self.items.append(item)
+        self.tableView.reloadData()
+    }
+    
+    
+}
+
+extension MyTodoTableViewController: EditItemDelegate {
+    func editItem(newItem: TodoItem, itemIndex: Int) {
+        self.items[itemIndex] = newItem
+        self.tableView.reloadData()
+    }
 }
