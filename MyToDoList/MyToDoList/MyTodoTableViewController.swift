@@ -9,11 +9,14 @@ import UIKit
 
 class MyTodoTableViewController: UITableViewController {
     
+    @IBOutlet weak var plusButton: UIBarButtonItem!
+    
     var items: [TodoItem] = [
-        TodoItem(title: "IOS HW 01", isChecked: false),
+        TodoItem(title: "Have a walk", isChecked: false),
         TodoItem(title: "Take a nap", isChecked: false),
         TodoItem(title: "Check emails", isChecked: true)
     ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,9 @@ class MyTodoTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
         loadItems()
     }
 
@@ -64,14 +69,41 @@ class MyTodoTableViewController: UITableViewController {
         return true
     }
     */
-
+    
+    private func handleMarkDelete(indexPath: IndexPath) {
+        items.remove(at: indexPath.row)
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal,
+                                        title: "Delete") { [weak self] (action, view, completionHandler) in
+                                            self?.handleMarkDelete(indexPath: indexPath)
+                                            completionHandler(true)
+        }
+        action.backgroundColor = .systemRed
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        if item.isChecked {
+            item.isChecked = false
+        } else {
+            item.isChecked = true
+        }
+        self.tableView.reloadData()
+    }
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         items.remove(at: indexPath.row)
         self.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
-
+    
+        
+        
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
